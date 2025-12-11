@@ -30,7 +30,7 @@ This tool helps keep your workspace clean by sorting images, documents, videos, 
 ---
 
 ### 📂 Project Structure
-├── file_organizer.py
+├── file_organizer.py <br>
 └── README.md
 
 ### 🛠️ Technologies Used

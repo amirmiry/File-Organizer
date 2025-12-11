@@ -1,5 +1,4 @@
 # import  modules and variables
-from encodings.base64_codec import base64_decode
 from pathlib import Path
 import shutil
 
@@ -24,7 +23,7 @@ def create_categories_directories():
 
 
 # searching and categorizing the files
-def serching_and_categories_files():
+def searching_and_categories_files():
    for files in  base_dir.rglob("*"):
        for category , extensions in FILE_CATEGORIES.items():
             if files.suffix in extensions:
@@ -37,7 +36,7 @@ def serching_and_categories_files():
 # run the application
 def main():
     create_categories_directories()
-    serching_and_categories_files()
+    searching_and_categories_files()
     print("The Process has been completed!")
 
 

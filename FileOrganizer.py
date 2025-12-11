@@ -20,3 +20,15 @@ FILE_CATEGORIES = {
 def create_categories_directories():
     for category , _ in FILE_CATEGORIES.items():
         (target_dir / category).mkdir(exist_ok=True , parents=True)
+
+
+
+# searching and categorizing the files
+def serching_and_categories_files():
+   for files in  base_dir.rglob("*"):
+       for category , extensions in FILE_CATEGORIES.items():
+            if files.suffix in extensions:
+                try:
+                    shutil.copy(files , target_dir/category )
+                except shutil.SameFileError:
+                    pass

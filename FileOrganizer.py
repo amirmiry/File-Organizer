@@ -40,3 +40,6 @@ def main():
     serching_and_categories_files()
     print("The Process has been completed!")
 
+
+if __name__ == "__main__":
+    main()

@@ -32,3 +32,11 @@ def serching_and_categories_files():
                     shutil.copy(files , target_dir/category )
                 except shutil.SameFileError:
                     pass
+
+
+# run the application
+def main():
+    create_categories_directories()
+    serching_and_categories_files()
+    print("The Process has been completed!")
+

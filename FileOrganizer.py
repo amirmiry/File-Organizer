@@ -15,3 +15,8 @@ FILE_CATEGORIES = {
     "audio": [ ".mp3",  ".wav", ".aac" , ".flac" , ".ogg"],
     "archives": [ ".zip",  ".rar" , ".tar" , ".gz", ".7z"]
 }
+
+# create directories based on the categories
+def create_categories_directories():
+    for category , _ in FILE_CATEGORIES.items():
+        (target_dir / category).mkdir(exist_ok=True , parents=True)
